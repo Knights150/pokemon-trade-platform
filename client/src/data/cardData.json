@@ -1,0 +1,10 @@
+{
+  "Sword & Shield": {
+    "Base Set": ["Pikachu", "Charizard", "Snorlax"],
+    "Vivid Voltage": ["Zarude", "Orbeetle"]
+  },
+  "Sun & Moon": {
+    "Burning Shadows": ["Ho-Oh", "Gardevoir"],
+    "Team Up": ["Pikachu & Zekrom", "Gengar & Mimikyu"]
+  }
+}
