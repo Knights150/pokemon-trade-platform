@@ -6,6 +6,10 @@ function SearchResultsPage() {
   const navigate = useNavigate();
   const { results = [], query = '' } = location.state || {};
 
+  const handleCardClick = (card) => {
+    navigate('/', { state: { selectedCard: card } });
+  };
+
   return (
     <div className="p-4 max-w-6xl mx-auto">
       <button
@@ -26,7 +30,8 @@ function SearchResultsPage() {
           {results.map(card => (
             <div
               key={card.id}
-              className="border p-3 rounded hover:shadow-md transition text-center"
+              onClick={() => handleCardClick(card)}
+              className="border p-3 rounded hover:shadow-md transition text-center cursor-pointer hover:ring-2 hover:ring-blue-400"
             >
               <img src={card.image} alt={card.name} className="w-28 h-40 mx-auto object-contain mb-2" />
               <div className="font-semibold text-sm">{card.name}</div>
